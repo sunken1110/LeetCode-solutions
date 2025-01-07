@@ -4,6 +4,8 @@
 # In[ ]:
 
 
+# https://leetcode.com/problems/string-matching-in-an-array/description
+
 class Solution:
     def stringMatching(self, words: List[str]) -> List[str]:
         ans = []
