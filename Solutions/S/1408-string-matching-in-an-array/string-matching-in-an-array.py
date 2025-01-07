@@ -6,6 +6,7 @@
 
 # https://leetcode.com/problems/string-matching-in-an-array/description
 
+# Complexity O(n^2)
 class Solution:
     def stringMatching(self, words: List[str]) -> List[str]:
         ans = []
@@ -18,7 +19,7 @@ class Solution:
         return ans
 
 
-# Brute-force
+# Brute-force - Complexity O(n^2)
 class Solution:
     def stringMatching(self, words: List[str]) -> List[str]:
         n = len(words)
