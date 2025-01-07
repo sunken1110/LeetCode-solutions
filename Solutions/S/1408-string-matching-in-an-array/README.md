@@ -17,6 +17,7 @@ The task is to identify every word which is a substring of the other. This is a 
   
 ## Solutions
 ```python
+# Complexity O(n^2)
 class Solution:
     def stringMatching(self, words: List[str]) -> List[str]:
         ans = []
@@ -29,7 +30,7 @@ class Solution:
         return ans
 
 
-# Brute-force
+# Brute-force - Complexity O(n^2)
 class Solution2:
     def stringMatching(self, words: List[str]) -> List[str]:
         n = len(words)
