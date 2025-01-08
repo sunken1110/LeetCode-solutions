@@ -3,7 +3,7 @@
 [Problem Link](https://leetcode.com/problems/count-prefix-and-suffix-pairs-i/description)
 
 ## Intuition
-The task is to count a number of words which is both prefix and suffix of the other. This is a simple brute-force search.
+The task is to count a number of words which is both prefix and suffix of the others. This is a simple brute-force search.
 
 ## Approach
 **Step-by-Step Process**
@@ -11,7 +11,7 @@ The task is to count a number of words which is both prefix and suffix of the ot
 1. To check the prefix/suffix condition, we use `startswith`/`endswith` method, respectively.
    - **Example** : `["ab", "abcde"]` -> `"abcde".startswith("ab")` returns `True`
 
-2. For each `i`th word in `words`, enough to check the other `(i+1)`th words.
+2. For each `i`th word in `words`, enough to check the other `(i+1)`th~ words.
   
 ## Solutions
 ```python
