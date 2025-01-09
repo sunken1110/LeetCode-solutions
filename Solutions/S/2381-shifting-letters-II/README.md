@@ -6,11 +6,37 @@
 The goal is to compute final shifts of each letters in efficient time. We can do by performing brute-force approach,
 but this results O(n^2) time complexity. Here, 'prefix sum' is a good technique to apply with.
 
+For easy understanding, let's see an example: `s = "abc"`, `shifts = [[0,1,0], [1,2,1], [0,2,1]]`. For `[0,2,1]`, a naive shift table is 
+|Index|0|1|2|
+|-|-|-|-|
+|Shift|1|1|1|
+
+which can be obtained by access **every** index of shifts (0 to 2).
+
+A prefix sum works as follow:
+|Index|0|1|2|3|
+|-|-|-|-|-|
+|Shift|1|0|0|-1|
+
+`"a" (Index[0])` shifts `1 (Shift[0])`, `"b" (Index[1])` shifts `1 (Shift[0] + Shift[1])`, `"c" (Index[2])` shifts
+`1 (Shift[0] + Shift[1] + Shift[2])`, and shifts of all the other indicies are neutralized by `index 3 (Shift[0] + Shift[1] + Shift[2] + Shift[3])`.
+This requires **only** 2 indicies (`start`, `end`) to perform each shift.
+
+Back to the example,
+|Index|0|1|2|3|
+|-|-|-|-|-|
+|Shift 1|-1|0|1|0|
+|Shift 2|0|1|0|-1|
+|Shift 3|1|0|0|-1|
+|Total Shift|0|1|1|-2|
+
+`"a"` shifts 0, `"b"` shifts 0 + 1, `"c"` shifts 0 + 1 + 1, so return `"ace"`.
+
 ## Approach
 **Step-by-Step Process**
 
 1. Set a `total_shift` array with length `len(s) + 1`, which store indicies of shifts.
-   - This array only marks 2 values, start and end indicies, in the sense of prefix sum.
+   - This array only marks 2 values, `start` and `end` indicies, in the sense of prefix sum.
 
 2. Cumulatively sum `total_shift`.
 
