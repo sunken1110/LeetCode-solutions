@@ -3,7 +3,7 @@
 [Problem Link](https://leetcode.com/problems/counting-words-with-a-given-prefix/description)
 
 ## Intuition
-The task is to count a number of words which is a prefix and of the other. This is a simple brute-force search.
+The task is to count a number of words which is a prefix of the other. This is a simple brute-force search.
 
 ## Approach
 **Step-by-Step Process**
