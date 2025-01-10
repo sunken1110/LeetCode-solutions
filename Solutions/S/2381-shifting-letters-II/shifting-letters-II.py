@@ -6,7 +6,7 @@
 
 # https://leetcode.com/problems/shifting-letters-ii/description
 
-# Prefix Sum - Complexity O(n^2)
+# Prefix Sum - Complexity O(n)
 class Solution:
     def shiftingLetters(self, s: str, shifts: List[List[int]]) -> str:
         n = len(s)
