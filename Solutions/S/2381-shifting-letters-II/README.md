@@ -19,8 +19,8 @@ A prefix sum works as follow:
 |Shift|1|0|0|-1|
 
 `"a" (Index[0])` shifts `1 (Shift[0])`, `"b" (Index[1])` shifts `1 (Shift[0] + Shift[1])`, `"c" (Index[2])` shifts
-`1 (Shift[0] + Shift[1] + Shift[2])`, and shifts of all the other indicies are neutralized by `index 3 (Shift[0] + Shift[1] + Shift[2] + Shift[3])`.
-This requires **only** 2 indicies (`start`, `end`) to perform each shift.
+`1 (Shift[0] + Shift[1] + Shift[2])`, and shifts of all the other indices are neutralized by `index 3 (Shift[0] + Shift[1] + Shift[2] + Shift[3])`.
+This requires **only** 2 indices (`start`, `end`) to perform each shift.
 
 Back to the example,
 |Index|0|1|2|3|
@@ -35,8 +35,8 @@ Back to the example,
 ## Approach
 **Step-by-Step Process**
 
-1. Set a `total_shift` array with length `len(s) + 1`, which store indicies of shifts.
-   - This array only marks 2 values, `start` and `end` indicies, in the sense of prefix sum.
+1. Set a `total_shift` array with length `len(s) + 1`, which store indices of shifts.
+   - This array only marks 2 values, `start` and `end` indices, in the sense of prefix sum.
 
 2. Cumulatively sum `total_shift`.
 

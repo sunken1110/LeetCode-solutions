@@ -12,7 +12,7 @@ between them.
 
 1. For every 26 alphabet, check which can be a candidate of prefix-suffix pair.
 
-2. Find the indicies of prefix-suffix, then count unique characters in the range.
+2. Find the indices of prefix-suffix, then count unique characters in the range.
     - `set()` is a proper tool for checking uniqueness.
   
 ## Solutions
