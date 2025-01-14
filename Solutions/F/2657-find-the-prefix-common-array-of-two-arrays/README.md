@@ -4,7 +4,7 @@
 
 ## Intuition
 Permutation of length `n` contains every integers from 1 to n exactly once. Main idea is that a prefix common array of `A` and `B`
-returns a count of integers which is already seen among both `A[0]` ~ `A[i]` and `B[0] ~ B[i]`. Thus, for each step, we track the
+returns a count of integers which is already seen among both `A[0]` ~ `A[i]` and `B[0]` ~ `B[i]`. Thus, for each step, we track the
 occurrence of integers until they are found twice.
 
 ## Approach
