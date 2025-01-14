@@ -13,8 +13,8 @@ That is, for each character in `s`, each process is equivalent to delete 2 of th
 1. Count the frequency of each character in `s`.
   
 2. For each character, count maximum number of processes until the number of it is at most 2.
-    - If the frequency is odd, we delete until total number of 1.
-    - If the frequency is even, we delete until total number of 2.
+    - If the frequency is odd, we delete 2 characters until the total number is 1.
+    - If the frequency is even, we delete 2 characters until the total number is 2.
 
 3. The length of final string is a sum of the final number of each character.
   
