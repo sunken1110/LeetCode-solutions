@@ -9,7 +9,7 @@ The task is to count a number of words which is a prefix of the other. This is a
 **Step-by-Step Process**
 
 1. To check the prefix condition, we use `startswith` method.
-   - **Example** : `["ab", "abcde"]` -> `"abcde".startswith("ab")` returns `True`
+    - **Example** : `["ab", "abcde"]` -> `"abcde".startswith("ab")` returns `True`
   
 ## Solutions
 ```python

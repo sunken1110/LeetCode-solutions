@@ -6,7 +6,7 @@
 
 # https://leetcode.com/problems/counting-words-with-a-given-prefix/description
 
-# Complexity O(n*m)
+# Complexity O(n)
 class Solution:
     def prefixCount(self, words: List[str], pref: str) -> int:
         
