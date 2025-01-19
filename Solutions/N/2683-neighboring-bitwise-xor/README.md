@@ -3,7 +3,7 @@
 [Problem Link](https://leetcode.com/problems/neighboring-bitwise-xor/description)
 
 ## Intuition
-It's an easy application uses the property of `xor`, that `$x \oplus y = z \leftrightarrow x = y \oplus z $`.
+It's an easy application uses the property of `xor`, that $x \oplus y = z \leftrightarrow x = y \oplus z $.
 
 ## Approach
 **Step-by-Step Process**
