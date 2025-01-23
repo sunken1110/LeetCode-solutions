@@ -4,13 +4,13 @@
 
 ## Intuition
 We have to connect at least one valid path and the minimum cost of it. We use BFS by traveling the grid along the original trace
-and record every adjacent grids as cost + 1. If we don't reach `[m-1, n-1]` yet, then now travel not-visited grids of cost + 1.
-We repeat this process until we reach the final destination.
+and expand the trace by connecting adjacent grids with `cost + 1` until we reach the destination.
+If we don't reach `[m-1, n-1]` yet, then now travel expanded not-visited grids of `cost + 1` and repeat over and over.
 
 ## Approach
 **Step-by-Step Process**
 
-1. Set the direction lists. Note that grid[i][j] starts from 1 not 0.
+1. Set the direction lists. Note that `grid[i][j]` starts from 1 not 0.
 
 2. Start traveling from the original point `not_visited = deque([x=0, y=0, cost=0])` along the given trace.
     - While traveling, mark every visited grid as `cost` since we can access freely.
