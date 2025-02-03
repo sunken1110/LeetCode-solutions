@@ -13,7 +13,7 @@ The task is to count a number of words which is a prefix of the other. This is a
   
 ## Solutions
 ```python
-# Complexity O(n*m)
+# Complexity O(n)
 class Solution:
     def prefixCount(self, words: List[str], pref: str) -> int:
         
