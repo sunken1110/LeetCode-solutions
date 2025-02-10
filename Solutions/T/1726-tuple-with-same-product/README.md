@@ -16,7 +16,7 @@ to calculate permutations of it.
     - If a tuple `(a, b, c, d)` is fixed with `a * b = c * d`, then there are totally 8 permutations.
     - > 2 from changing order of `(a, b)`, 2 from changing order of `(c, d)`, and 2 from swapping `(a, b)` and `(c, d)`.
     - If there are `freq` pairs of generating the product, then `freq` choose 2 is total permutations.
-    - > `freq * (freq - 1) / 2` cases occurred.
+    - > `freq * (freq - 1) / 2` cases occurr.
 
 3. Multiply every permutation for each product, then sum them up.
   
