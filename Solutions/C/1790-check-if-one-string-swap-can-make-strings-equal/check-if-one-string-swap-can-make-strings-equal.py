@@ -1,0 +1,30 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+# https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/description
+
+# Complexity O(n)
+class Solution:
+    def areAlmostEqual(self, s1: str, s2: str) -> bool:
+        if s1 == s2:
+            return True
+
+        if sorted(s1) != sorted(s2):
+            return False
+
+        cnt = 0
+
+        for i in range(len(s1)):
+            if s1[i] != s2[i]:
+                cnt += 1
+
+            if cnt == 3:
+                return False
+
+        if cnt == 1:
+            return False
+        elif cnt == 2:
+            return True
