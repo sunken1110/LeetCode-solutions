@@ -16,13 +16,13 @@ If that position is already filled by the other integer, we adjust the original 
   
 2. To track already filled integers, we define `used = set()`.
 
-3. Declare backtracking algorithm which take `idx`, the index of `seq`, as argument.
+3. Declare backtracking algorithm which takes `idx`, the index of `seq`, as argument.
     - Finishing condition is if a sequence is completed, i.e., `idx == len_seq`.
     - If the position `idx` is already filled by other integer, we move to next index `idx + 1`.
     - To fulfill the lexicographically largest condition, we insert numbers in descending order.
     - If `idx` and corresponding `num` is fixed, we also fill `idx + num` as `num`.
     - Move to the next backtracking of `idx + 1`.
-      >> If backtracking terminated before fully constructed, reset `idx` and `idx + num` and backtrack with `num-1`.
+      > If backtracking terminated before fully constructed, reset `idx` and `idx + num` and backtrack with `num - 1`.
   
 ## Solutions
 ```python
