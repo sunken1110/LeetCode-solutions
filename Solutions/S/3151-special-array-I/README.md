@@ -13,7 +13,7 @@ A very simple parity check problem.
   
 ## Solutions
 ```python
-# Complexity O(n*m)
+# Complexity O(n)
 class Solution:
     def isArraySpecial(self, nums: List[int]) -> bool:
         for i in range(len(nums) - 1):
