@@ -18,7 +18,7 @@ skipping the adjacent homes due to the robber's persistence, then compare to `k`
   
 ## Solutions
 ```python
-# Complexity O(n*log*n))
+# Complexity O(n*log(n))
 class Solution:
     def minCapability(self, nums: List[int], k: int) -> int:
         def check(capability):

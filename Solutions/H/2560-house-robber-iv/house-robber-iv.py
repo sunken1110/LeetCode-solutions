@@ -6,7 +6,7 @@
 
 # https://leetcode.com/problems/house-robber-iv/description
 
-# Complexity O(n*log*n))
+# Complexity O(n*log(n))
 class Solution:
     def minCapability(self, nums: List[int], k: int) -> int:
         def check(capability):
