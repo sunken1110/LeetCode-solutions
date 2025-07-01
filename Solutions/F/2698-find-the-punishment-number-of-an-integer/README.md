@@ -3,37 +3,41 @@
 [Problem Link](https://leetcode.com/problems/find-the-punishment-number-of-an-integer/description)
 
 ## Intuition
-To easily find the two smallest integers in `nums`, we use heap structure. Since every operations replace 
-2 elements to 1 element, the total number of operations is at most `len(nums)`.
+We use divide and conquer algorithm, that is, if `x` can be partitioned into `a`, `b`, `c`, ..., then `x-a` can be 
+partitioned into `b`, `c`, ... while `x-a` is positive. 
 
 ## Approach
 **Step-by-Step Process**
 
-1. Heapify `nums` to extract the smallest integer.
+1. Define a divide and conquer algorithm `partition(x, target)`.
+    - Since `0 <= n <= 1000`, each partition can have at most 3 digits, so divider must be in `(10, 100, 1000)`.
+    - If we divide `x` to `x // div`, then `target` must be decremented by `x % div`.
 
-2. Within `len(nums)` iterations, process operations.
-
-3. With `sum_set = defaultdict(list)`, push numbers in each digit sum.
-    - If the smallest integer exceed the threshold `k`, break.
+2. For every integer up to `n`, do `partition` and return the punishment number.
   
 ## Solutions
 ```python
-# Complexity O(n*log(n))
+# Time Complexity O(n*2^log(x, 10)), Space Complexity O(log(x, 10))
 class Solution:
-    def minOperations(self, nums: List[int], k: int) -> int:
-        heapify(nums)
+    def punishmentNumber(self, n: int) -> int:
+        def partition(x, target):
+            if x == target:
+                return True
+
+            if x == 0:
+                return target == 0
+
+            for div in (10, 100, 1000):
+                if partition(x // div, target - x % div):
+                    return True
+
+            return False
+
         ans = 0
 
-        for i in range(len(nums)):
-            x = heappop(nums)
-   
-            if x < k:
-                y = heappop(nums)
-                z = x*2 + y if x < y else y*2 + x
-                heappush(nums, z)
-                ans += 1
-
-            else:
-                break
+        for i in range(1, n+1):
+            if partition(i*i, i):
+                ans += i*i
 
         return ans
+```
