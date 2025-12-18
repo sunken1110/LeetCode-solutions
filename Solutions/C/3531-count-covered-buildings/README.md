@@ -6,7 +6,8 @@
 Note that a covered building has 4 covering buildings in all four directions. That is, if we mark every 
 maximum and minimum of each row and column, both `x` and `y` coordinates of a covered building must be 
 located between them. We first scan every coordinate of `buildings` and update the maximum and minimum 
-of each row and column. Then we check if a `building` with coordinate `(x, y)` is in-between  
+of each row and column. Then we check if a `building` is located in the pre-computed range, which ensures 
+that building is covered.
 
 ## Approach
 **Step-by-Step Process**
